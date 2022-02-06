@@ -1,4 +1,4 @@
 ﻿streamlit
 tensorflow
-opencv-python-headless
+opencv-python
 streamlit-webrtc
