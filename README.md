@@ -64,6 +64,7 @@ OpenCV-python
 
 Transfer learning (TL) is a research problem in machine learning (ML) that focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. For example, knowledge gained while learning to recognize cars could apply when trying to recognize trucks. Reusing or transferring information from previously learned tasks to learning of new tasks has the potential to significantly improve the sample efficiency of a Data Scientist.
 
+![Picture2](https://user-images.githubusercontent.com/86178648/153134977-68ec03b0-8ef7-4831-9611-7f28aa654656.png)
 
 
 • We have trained the model with VGG16 and got the training accuracy of 84% and validation accuracy of 56% which is not acceptable because model i overfitted.This error is may be because the model was trained on rgb images and the data set contains grascale images.
@@ -72,6 +73,7 @@ Transfer learning (TL) is a research problem in machine learning (ML) that focus
 
 A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other. The pre-processing required in a ConvNet is much lower as compared to other classification algorithms. While in primitive methods filters are hand-engineered, with enough training, ConvNets have the ability to learn these filters/characteristics. The architecture of a ConvNet is analogous to that of the connectivity pattern of Neurons in the Human Brain and was inspired by the organization of the Visual Cortex. Individual neurons respond to stimuli only in a restricted region of the visual field known as the Receptive Field. A collection of such fields overlap to cover the entire visual area.
 
+![Picture1](https://user-images.githubusercontent.com/86178648/153135030-de8583b8-64b6-4d49-8b8d-f23e149282ed.png)
 
 
 • The training gave the accuracy of 76% and test accuracy of 66%. It seems excellent. So, I save the model and the detection i got from live video was excellent.
@@ -82,22 +84,36 @@ A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which 
 
 • Thus I decided that I will deploy the model.
 
-Performance Metrix
+### Performance Metrix
+
+![download (1)](https://user-images.githubusercontent.com/86178648/153135273-eed7c03d-bc85-4653-a7b3-25c613da5bee.png)
 
 
-Confusion Matrix (Normalized)
+### Confusion Matrix (Normalized)
+
+![Picture3](https://user-images.githubusercontent.com/86178648/153135404-2d2d9e0f-1507-4aae-849c-70702275f4a0.png)
 
 
 Realtime Local Video Face Detection
-The following video contains the real time deploymnet of the app in local runtime
 
- face_emotion_detection_live_demo.mp4 
-Deployment of Streamlit WebApp in Heroku and Streamlit
+The following video contains the real time deploymnet of the app in local machine
+
+
+https://user-images.githubusercontent.com/86178648/153136528-7513c057-fb20-40ed-9a67-0b70f15ccc36.mp4
+
+
+## Deployment of Streamlit WebApp in Heroku and Streamlit
+
 We have created front-end using Streamlit for webapp and used streamlit-webrtc which helped to deal with real-time video streams. Image captured from the webcam is sent to VideoTransformer function to detect the emotion. Then this model was deployed on heroku platform with the help of buildpack-apt which is necessary to deploy opencv model on heroku.
 
-Website	Link
-Heroku	https://face-recognition-emotion.herokuapp.com/
-Streamlit	https://share.streamlit.io/aaryant31/face_emotion_recognition/main/app.py
-Conclusion
+## Website	Link
+
+Heroku - 	https://face-exp-recognizer.herokuapp.com/
+
+
+Streamlit - 	https://share.streamlit.io/armanalam6342/face-emotion-recognition/app.py
+
+
+# Conclusion
 We were successfull in deploying the strealit app on heruko with the model accuracy of 66 %.
 Accuracy can be increased by training the model for longer time with more no of images which can be created by data augmentation
